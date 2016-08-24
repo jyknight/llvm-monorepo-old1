@@ -214,9 +214,20 @@ fixes:**
 Changes to the PowerPC Target
 -----------------------------
 
-* Moved some optimizations from O3 to O2 (D18562)
-
-* Enable sibling call optimization on ppc64 ELFv1/ELFv2 abi
+* Moved some optimizations from O3 to O2 
+* Enable sibling call optimization on ppc64 ELFv1/ELFv2 ABI
+* Improved exploitation for some ISA 2.07 instructions (xvabssp, xvabsdp,
+  xvnabsdp, xvnegdp)
+* Improve code generation for large/complex boolean expressions
+* Improve code generation for function prologue/epilogue
+* The complete set of instructions from ISA 3.0 is available through [inline]
+  ASM
+* Exploitation for a small set of the new instructions was added
+* Change to vector legalization strategy generally improves performance of
+  vectorized code
+* Improvements to INT <-> FP conversions on Power8 and later cores
+* Front end support for the __float128 data type and an option to turn on back
+  end support (through libcalls)
 
 Changes to the X86 Target
 -------------------------
